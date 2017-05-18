@@ -21,7 +21,19 @@ Utilizaremos as bibliotecas  [JOML](https://github.com/JOML-CI/JOML) e [LWJGL](h
 Elas podem ser automaticamente baixadas pela sua IDE, pois todos os projetos possuem um arquivo chamado pom.xml, que 
 permite que o software [Maven](https://maven.apache.org/) (já integrado as IDEs sugeridas) as baixem.
 
- # Classe Window
+# Sobre este projeto
+
+Este projeto contém o código base, vazio, da aula 1. Trata-se dos arquivos necessários para acompanhar a aula em sala.
+
+Nele, você encontrará algumas classes, já programadas. A OpenGL é *somente* uma biblioteca de desenho gráfico. Ela 
+*não possui* classes para abrir a janela, controlar o game loop ou capturar eventos do teclado. O código para isso 
+deve ser feito por uma biblioteca auxiliar como a SDL, GLFW ou similar. A LWJGL já inclui um port da GLFW para java e as 
+classes disponíveis nesse projeto as utilizam para abrir a janela com a OpenGL dentro. Nada disso envolve a própria 
+OpenGL em si, por isso, esse código já vem pronto. 
+
+A seguir, faremos uma breve descrição de cada classe.
+
+## Classe Window
   
 A classe `Window` abre a janela principal da aplicação utilizando a biblioteca glfw e controla o game loop. Ela possui 
 os seguintes métodos:
@@ -35,7 +47,7 @@ redimensionável, qual será a classe que receberá eventos de teclado, e qual s
 A classe `Window` foi organizada de modo que toda lógica da scena seja implementada numa classe filha da interface 
 `Scene`.
 
-# Scene
+## Scene
 
 Essa interface impõe a implementação de 4 métodos:
 
@@ -46,12 +58,12 @@ Essa interface impõe a implementação de 4 métodos:
 
 A classe Triangle.java, que conterá o código da aula é uma implementação da interface Scene.
 
-#Keyboard
+## Keyboard
 
 Trata-se de uma classe auxiliar para armazenar que teclas foram pressionadas. Um exemplo de seu uso está no método 
 update da classe Window
 
-#Classe Triangle
+## Classe Triangle
 
 Por fim, o projeto contém a classe Triangle. Trata-se de uma implementação de Scene, onde desenharemos o primeiro 
 triangulo. Neste projeto a classe contém apenas o código para definir a cor de limpeza de tela no método init, e uma
@@ -59,7 +71,7 @@ implementação para a janela fechar ao se pressionar ESC no método update.
 
 É nessa classe que iremos trabalhar. Atualmente, ela simplesmente abre uma janela preta, sem desenho algum.
 
-#Outros detalhes
+# Outros detalhes
 
 Em nosso curso, implementaremos código em dois pacotes `br.pucpr.mage`, que conterá nosso motor gráfico, chamado de 
 Micro Academic Graphics Engine (MAGE). 
