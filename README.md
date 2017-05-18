@@ -16,7 +16,8 @@ Para executar os exemplos da aula você precisará:
  
  ## Bibliotecas
 
-Utilizaremos as bibliotecas  [JOML](https://github.com/JOML-CI/JOML) e [LWJGL](https://www.lwjgl.org/). 
+Utilizaremos as bibliotecas [JOML](https://github.com/JOML-CI/JOML), que contém as classes matemáticas e 
+a [LWJGL](https://www.lwjgl.org/), que dá acesso as bibliotecas OpenGL, GLFW e stb. 
 
 Elas podem ser automaticamente baixadas pela sua IDE, pois todos os projetos possuem um arquivo chamado pom.xml, que 
 permite que o software [Maven](https://maven.apache.org/) (já integrado as IDEs sugeridas) as baixem.
@@ -41,7 +42,7 @@ os seguintes métodos:
 redimensionável, qual será a classe que receberá eventos de teclado, e qual será a versão de OpenGL utilizada 
 (no caso 3.3)
 - loop(): Executa o game loop. Calcula o tempo entre updates e realiza a troca dos buffers. Dispara os eventos de init, 
- update, draw e deInit da cena.
+ update, draw e deinit da cena.
 - show(): Chama os métodos init() e draw() e faz um tratamento básico de erros.
 
 A classe `Window` foi organizada de modo que toda lógica da scena seja implementada numa classe filha da interface 
