@@ -41,6 +41,7 @@ public class Triangle implements Scene {
 	 */
 	@Override
 	public void draw() {
+		glClear(GL_COLOR_BUFFER_BIT);
 	}
 
 	/**
